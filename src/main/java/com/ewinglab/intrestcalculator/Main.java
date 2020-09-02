@@ -19,6 +19,10 @@ public class Main {
         System.out.println("What is the Intrest Rate?");
         double intrestrate = s.nextDouble();
         
+        //Get users intrest rate
+        System.out.println("How many years do you want to calculate?");
+        int years = s.nextInt();
+        
         //Loading screen
         System.out.println("Calculating...  (please wait)");
         
@@ -26,7 +30,7 @@ public class Main {
         IntrestCalculator calculator = new IntrestCalculator();
         
         //Convert return of double to usable string that we can print using the PrintLN method.
-        String TotalString = Double.toString(calculator.CalculateIntrest(investment, intrestrate));
+        String TotalString = Double.toString(calculator.CalculateIntrest(investment, intrestrate, years));
         
         //Give to user
         System.out.println("Your Total is: "+TotalString);
